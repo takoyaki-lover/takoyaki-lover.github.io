@@ -137,20 +137,21 @@ function themeDark() {
 let theme = document.getElementById('theme-select');
 
 switch (localStorage.theme) {
+    case undefined:
+    case 'system': {
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            themeLight();
+        } else {
+            themeDark();
+        }
+        break;
+    }
     case 'light': {
         themeLight();
         break;
     }
     case 'dark': {
         themeDark();
-        break;
-    }
-    case undefined: {
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            themeLight();
-        } else {
-            themeDark();
-        }
         break;
     }
 }
@@ -163,6 +164,7 @@ theme.addEventListener('change', function() {
             } else {
                 themeDark();
             }
+            localStorage.theme = 'system';
             break;
         }
         case 'light': {
@@ -416,6 +418,14 @@ function batteryDisplay_1() {
             document.getElementById('level-area').style.color = '#ee240a';
         } else if (getCurrentlevel() < 70) {
             switch (localStorage.theme) {
+                case 'system': {
+                    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                        document.getElementById('level-area').style.color = '#000000';
+                    } else {
+                        document.getElementById('level-area').style.color = '#ffffff';
+                    }
+                    break;
+                }
                 case 'light': {
                     document.getElementById('level-area').style.color = '#000000';
                     break;
