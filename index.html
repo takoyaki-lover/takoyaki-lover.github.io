@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Battery Performance Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 
+</head>
+
+<body class="theme-1">
+
+    <div class="title-area">
+        <h1 class="title">Battery Performance Test</h1>
+        <h1 class="select-theme-area">
+            <select id="theme-select" name="selece" size="1" class="theme-select">
+                <option disabled selected>Theme</option>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </h1>
+    </div>
+    <p class="first-p">Battery level: <span id="level-area"><span class="number" id="level"></span>%</span> (<span id="increase">increasing</span><span id="decrease">decreasing</span><span id="full">full</span>)</p>
+    <p class="second-p">Charge status: <span class="charge-status-area"><span id="unknown">unknown</span><span id="charge">charging</span><span id="discharge">discharging</span></span> (<span id="charge-true">true</span><span id="charge-false">false</span>)</p>
+    <p class="normal-p">Charging time: <span class="number" id="charge-time"></span> <span id="charge-infinity">(infinity)</span></p>
+    <p class="normal-p">Discharging time: <span class="number" id="discharge-time"></span> <span id="discharge-infinity">(infinity)</span></p>
+    <hr>
+    <p class="normal-p">Time: <span class="number" id="current-day"></span> (<span id="sun">Sun</span><span id="mon">Mon</span><span id="tue">Tue</span><span id="wed">Wed</span><span id="thu">Thu</span><span id="fri">Fri</span><span id="sat">Sat</span>) <span class="number" id="current-time"></span> (Unixtime: <span class="number" id="unixtime"></span>)</p>
+    <p class="normal-p">Last charge status change: <span class="number" id="lastcharge-time"></span> (<span class="number" id="lastcharge-elapse"></span> ago)<button class="btn btn-normal btn-white" id="delete">Delete</button></p>
+    <p class="normal-p">Started: <span class="number" id="start-level"></span>% | Current: <span class="number" id="current-level"></span>% | Charged: <span class="number" id="change-amount"></span>% | Used: <span class="number" id="discharge-amount"></span>%</p>
+    <p class="normal-p">Last level change: <span class="number" id="lastlevel-time"></span> (<span class="number" id="lastlevel-elapse"></span> ago) <span id="is-full">(full battery)</span></p>
+    <div class="measurement-container">
+        <fieldset class="measurement-area">
+            <legend>Measurement</legend>
+            <div class="btn-normal-area">
+                <button class="btn btn-normal btn-white" id="start">Start</button><button class="btn btn-normal btn-white" id="stop">Stop</button><button class="btn btn-normal btn-white" id="reset">Reset</button><span class="me-mode">Mode: [<span id="not-start">not start</span><span id="in-process">in process</span><span id="complete">complete</span>]</span>
+            </div>
+            <p class="me-p">Time: <span class="number" id="me-time"></span> | Changed level: <span class="number" id="me-level"></span>% | Efficiency: <span class="number" id="me-result"></span><span id="me-unit">%/min</span><span id="me-fail">failed</span> <span id="is-present">(present)</span></p>
+        </fieldset>
+    </div>
+    <div class="history-area">
+        <p class="history-title">History</p>
+        <div class="font-size-0">
+            <textarea readonly class="theme-1" id="history"></textarea>
+            <div class="btn-clear-area">
+                <button class="btn btn-normal btn-white" id="copy">Copy</button>
+                <button class="btn btn-normal btn-white" id="clear">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="alert">
+        <div class="theme-2" id="alert-content">
+            <div class="font-size-0">
+                <div class="alert-header" id="alert-header"></div>
+                <div class="cross-header">
+                    <div class="cross" id="alert-close-cross">
+                        <div class="stick-area">
+                            <div class="stick-1"></div>
+                            <div class="stick-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-main">
+                <p id="alert-text"></p>
+                <div class="alert-btn-area">
+                    <button class="btn btn-modal btn-white" id="alert-close-ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm">
+        <div class="theme-2" id="confirm-content">
+            <div class="font-size-0">
+                <div class="confirm-header" id="confirm-header"></div>
+                <div class="cross-header">
+                    <div class="cross" id="confirm-close-cross">
+                        <div class="stick-area">
+                            <div class="stick-1"></div>
+                            <div class="stick-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-main">
+                <p id="confirm-text"></p>
+                <div class="confirm-btn-area">
+                    <button class="btn btn-modal btn-blue" id="confirm-close-yes">YES</button><button class="btn btn-modal btn-white" id="confirm-close-no">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
