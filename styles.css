@@ -12,6 +12,13 @@
         width: 690px;
     }
 
+    .theme-select {
+        font-size: 18px;
+        height: 30px;
+        width: 90px;
+        margin: 0 0 5px 0;
+    }
+
     .first-p {
         margin: 0;
     }
@@ -22,8 +29,9 @@
 
     hr {
         width: 690px;
-        margin: 2px 0;
+        margin: 5px 0 6px 0;
     }
+
     .normal-p {
         margin: 5px 0 0 0;
     }
@@ -44,18 +52,6 @@
         font-size: 14px;
         width: 70px;
         height: 40px;
-    }
-
-    .btn-theme-light, .btn-theme-dark {
-        font-size: 20px;
-    }
-
-    .btn-theme-light {
-        margin: 0 10px 7px 0;
-    }
-
-    .btn-theme-dark {
-        margin: 0 0 7px 0;
     }
 
     #delete {
@@ -144,6 +140,13 @@
         width: 387px;
     }
 
+    .theme-select {
+        font-size: 13px;
+        width: 67px;
+        height: 24px;
+        margin: 0 0 3px 0;
+    }
+
     .first-p {
         margin: 2px 0 0 0;
     }
@@ -156,6 +159,7 @@
         width: 387px;
         margin: 4px 0;
     }
+
     .normal-p {
         margin: 5px 0 0 0;
     }
@@ -176,18 +180,6 @@
         font-size: 13px;
         width: 75px;
         height: 35.5px;
-    }
-
-    .btn-theme-light, .btn-theme-dark{
-        font-size: 13px;
-    }
-
-    .btn-theme-light {
-        margin: 0 6px 3px 0;
-    }
-
-    .btn-theme-dark {
-        margin: 0 0 3px 0;
     }
 
     #delete {
@@ -283,9 +275,14 @@ html {
     float: left;
 }
 
-.btn-theme-light, .btn-theme-dark {
-    border: 0;
+.theme-select {
+    vertical-align: middle;
+    border: 1px #000000 solid;
     border-radius: 0.5px;
+}
+
+.theme-select:hover {
+    cursor: pointer
 }
 
 .btn-theme-area, .btn-clear-area, .alert-btn-area, .confirm-btn-area {
@@ -360,7 +357,7 @@ html {
 #alert-header:active, #confirm-header:active {
     cursor: grabbing;
 }
-
+/*
 .btn-theme-light {
     background-color: #ffffff;
     color: black;
@@ -386,7 +383,7 @@ html {
 .btn-theme-dark:active {
     background-color: #666666;
 }
-
+*/
 .btn-white {
     background-color: #efefef;
 }
