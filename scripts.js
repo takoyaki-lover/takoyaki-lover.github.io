@@ -156,7 +156,7 @@ switch (localStorage.theme) {
     }
 }
 
-theme.addEventListener('change', function() {
+theme.addEventListener('change', function () {
     switch (theme.value) {
         case 'system': {
             if (window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -403,6 +403,14 @@ function batteryDisplay_1() {
     if (getCurrentlevel() == -1) {
         document.getElementById('level').textContent = '--';
         switch (localStorage.theme) {
+            case 'system': {
+                if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    document.getElementById('level-area').style.color = '#000000';
+                } else {
+                    document.getElementById('level-area').style.color = '#ffffff';
+                }
+                break;
+            }
             case 'light': {
                 document.getElementById('level-area').style.color = '#000000';
                 break;
