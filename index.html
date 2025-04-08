@@ -12,13 +12,19 @@
 
     <div class="title-area">
         <h1 class="title">Battery Performance Test</h1>
-        <h1 class="btn-theme-area"><button class="btn btn-theme-light" id="theme-light">Light</button><button class="btn btn-theme-dark" id="theme-dark">Dark</button></h1>
+        <h1 class="btn-theme-area">
+            <select id="theme-select" name="selece" size="1" class="theme-select">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </h1>
     </div>
     <p class="first-p">Battery level: <span id="level-area"><span class="number" id="level"></span>%</span> (<span id="increase">increasing</span><span id="decrease">decreasing</span><span id="full">full</span>)</p>
     <p class="second-p">Charge status: <span class="charge-status-area"><span id="unknown">unknown</span><span id="charge">charging</span><span id="discharge">discharging</span></span> (<span id="charge-true">true</span><span id="charge-false">false</span>)</p>
+    <p class="normal-p">Charging time: <span class="number" id="charge-time"></span> <span id="charge-infinity">(infinity)</span></p>
+    <p class="normal-p">Discharging time: <span class="number" id="discharge-time"></span> <span id="discharge-infinity">(infinity)</span></p>
     <hr>
-    <p class="small-p">Charging time: <span class="number" id="charge-time"></span> <span id="charge-infinity">(infinity)</span></p>
-    <p class="small-p">Discharging time: <span class="number" id="discharge-time"></span> <span id="discharge-infinity">(infinity)</span></p>
     <p class="normal-p">Time: <span class="number" id="current-day"></span> (<span id="sun">Sun</span><span id="mon">Mon</span><span id="tue">Tue</span><span id="wed">Wed</span><span id="thu">Thu</span><span id="fri">Fri</span><span id="sat">Sat</span>) <span class="number" id="current-time"></span> (Unixtime: <span class="number" id="unixtime"></span>)</p>
     <p class="normal-p">Last charge status change: <span class="number" id="lastcharge-time"></span> (<span class="number" id="lastcharge-elapse"></span> ago)<button class="btn btn-normal btn-white" id="delete">Delete</button></p>
     <p class="normal-p">Started: <span class="number" id="start-level"></span>% | Current: <span class="number" id="current-level"></span>% | Charged: <span class="number" id="change-amount"></span>% | Used: <span class="number" id="discharge-amount"></span>%</p>
