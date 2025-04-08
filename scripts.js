@@ -145,8 +145,7 @@ switch (localStorage.theme) {
         themeDark();
         break;
     }
-    case undefined:
-    case 'system': {
+    case undefined: {
         if (window.matchMedia('(prefers-color-scheme: light)').matches) {
             themeLight();
         } else {
@@ -164,7 +163,6 @@ theme.addEventListener('change', function() {
             } else {
                 themeDark();
             }
-            localStorage.theme = 'system';
             break;
         }
         case 'light': {
