@@ -1,0 +1,510 @@
+@media screen and (min-width: 401px) { /*for PC*/
+    html {
+        font-size: 18px;
+    }
+
+    body {
+        width: 690px;
+        margin: auto;
+    }
+
+    .title-area {
+        width: 690px;
+    }
+
+    .first-p {
+        margin: 0;
+    }
+
+    .second-p {
+        margin: 0;
+    }
+
+    hr {
+        width: 690px;
+        margin: 2px 0;
+    }
+    .normal-p {
+        margin: 5px 0 0 0;
+    }
+
+    .small-p {
+        margin: 5px 0 0 0;
+    }
+
+    .me-p {
+        margin: 6px 0 0 0;
+    }
+
+    .btn-normal {
+        font-size: 15px;
+    }
+
+    .btn-modal {
+        font-size: 14px;
+        width: 70px;
+        height: 40px;
+    }
+
+    .btn-theme-light, .btn-theme-dark {
+        font-size: 20px;
+    }
+
+    .btn-theme-light {
+        margin: 0 10px 7px 0;
+    }
+
+    .btn-theme-dark {
+        margin: 0 0 7px 0;
+    }
+
+    #delete {
+        width: 65px;
+        margin: 0 0 0 8px;
+    }
+
+    .measurement-container {
+        width: 690px;
+        margin: 5px 0 0 0;
+    }
+
+    .measurement-area {
+        padding: 5px 8px 10px 8px;
+    }
+
+    #start, #stop, #reset {
+        width: 70px;
+        margin: 0 10px 0 0;
+    }
+
+    .history-area {
+        width: 690px;
+        margin: 9px 0 0 0;
+    }
+
+    .history-title {
+        font-size: 13.5px;
+    }
+
+    #history {
+        font-size: 13px;
+        height: 230.2px;
+        margin: 1.5px 0 0 0;
+        padding: 0.1px 1px;
+    }
+
+    .btn-clear-area {
+        margin: 2px 0 0 0;
+    }
+
+    #copy, #clear{
+        width: 65px;
+    }
+
+    #copy {
+        margin: 0 10px 0 0;
+    }
+
+    #alert-content, #confirm-content {
+        margin: 20px auto auto auto;
+        width: 420px;
+    }
+
+    .alert-main, .confirm-main{
+        padding: 5px 15px 15px 15px;
+    }
+
+    #alert-text, #confirm-text {
+        font-size: 17px;
+    }
+
+    .alert-btn-area, .confirm-btn-area {
+        margin: 14px 5px 0 0;
+    }
+
+    #confirm-close-yes {
+        margin: 0 10px 0 0;
+    }
+
+}
+
+
+
+@media screen and (max-width: 400px) { /*for smartphone*/
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        width: 387px;
+        margin: 2px auto auto auto;
+    }
+
+    .title-area {
+        width: 387px;
+    }
+
+    .first-p {
+        margin: 2px 0 0 0;
+    }
+
+    .second-p {
+        margin: 2px 0 0 0;
+    }
+
+    hr {
+        width: 387px;
+        margin: 4px 0;
+    }
+    .normal-p {
+        margin: 5px 0 0 0;
+    }
+
+    .small-p {
+        margin: 4px 0 0 0;
+    }
+
+    .me-p {
+        margin: 4px 0 0 0;
+    }
+
+    .btn-normal {
+        font-size: 10px;
+    }
+
+    .btn-modal {
+        font-size: 13px;
+        width: 75px;
+        height: 35.5px;
+    }
+
+    .btn-theme-light, .btn-theme-dark{
+        font-size: 13px;
+    }
+
+    .btn-theme-light {
+        margin: 0 6px 3px 0;
+    }
+
+    .btn-theme-dark {
+        margin: 0 0 3px 0;
+    }
+
+    #delete {
+        width: 45px;
+        margin: 0 0 0 5px;
+        padding: 0.8px 6px;
+    }
+
+    .measurement-container {
+        margin: 5px 0 0 0;
+        width: 387px;
+    }
+
+    .measurement-area {
+        padding: 2px 4px 5px 4px;
+    }
+
+    #start, #stop, #reset {
+        width: 45px;
+        margin: 0 8px 0 0;
+    }
+
+    .history-area {
+        width: 387px;
+        margin: 8px 0 0 0;
+    }
+
+    .history-title {
+        font-size: 9px;
+    }
+
+    #history {
+        font-size: 6.4px;
+        height: 243px;
+        margin: 1.7px 0 0 0;
+        padding: 0 1px;
+    }
+
+    .btn-clear-area {
+        margin: 3px 0 0 0;
+    }
+
+    #copy, #clear {
+        width: 50px;
+    }
+
+    #copy {
+        margin: 0 6px 0 0;
+    }
+
+    #alert-content, #confirm-content {
+        margin: 40px auto auto auto;
+        width: 90%;
+    }
+
+    .alert-main, .confirm-main {
+        padding: 5px 15px 15px 15px;
+    }
+
+    #alert-text, #confirm-text {
+        font-size: 18px;
+    }
+
+    .alert-btn-area, .confirm-btn-area {
+        margin: 10px 6px 0 0;
+    }
+
+    #confirm-close-yes {
+        margin: 0 10px 0 0;
+    }
+
+}
+
+
+/*common*/
+
+html {
+    font-family: sans-serif;
+    text-size-adjust: none;
+}
+
+.number {
+    font-variant-numeric: tabular-nums;
+}
+
+.title-area, .title, .btn-theme-area, .btn-normal-area, .me-mode, .history-title, #alert-text, #confirm-text {
+    margin: 0;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: left;
+    float: left;
+}
+
+.btn-theme-light, .btn-theme-dark {
+    border: 0;
+    border-radius: 0.5px;
+}
+
+.btn-theme-area, .btn-clear-area, .alert-btn-area, .confirm-btn-area {
+    text-align: right;
+}
+
+.first-p, .second-p {
+    font-size: 1.4rem;
+}
+
+.normal-p, .me-p {
+    font-size: 1rem;
+}
+
+.small-p {
+    font-size: .9rem;
+}
+
+.btn-normal, .btn-modal {
+    border: 1px black solid;
+    border-radius: 2.5px;
+}
+
+.measurement-area {
+    display: block;
+    margin: 0;
+}
+
+.history-title, #history {
+    font-family: monospace;
+}
+
+#history {
+    resize: none;
+    width: calc(100% - 3.6px);
+}
+
+#level-area, .charge-status-area {
+    font-weight: bold;
+}
+
+#sun {
+    color: #fa2802;
+}
+
+#sat {
+    color: #2460b4;
+}
+
+#charge {
+    color: #ee240a;
+}
+
+#discharge {
+    color: #325abf;
+}
+
+.btn {
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn:hover, .cross:hover {
+    cursor: pointer;
+}
+
+#alert-header:hover, #confirm-header:hover {
+    cursor: grab;
+}
+
+#alert-header:active, #confirm-header:active {
+    cursor: grabbing;
+}
+
+.btn-theme-light {
+    background-color: #ffffff;
+    color: black;
+}
+
+.btn-theme-dark {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-theme-light:hover {
+    background-color: #dddddd;
+}
+
+.btn-theme-light:active {
+    background-color: #bbbbbb;
+}
+
+.btn-theme-dark:hover {
+    background-color: #444444;
+}
+
+.btn-theme-dark:active {
+    background-color: #666666;
+}
+
+.btn-white {
+    background-color: #efefef;
+}
+
+.btn-white:hover {
+    background-color: #e5e5e5;
+}
+
+.btn-white:active {
+    background-color: #d0d0d0;
+}
+
+.btn-blue {
+    background-color: #2a66ce;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #1056be;
+}
+
+.btn-blue:active {
+    background-color: #4175ce;
+}
+
+.cross-header {
+    display: inline-block;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+}
+
+.cross {
+    height: 16.2px;
+    width: 16.2px;
+    margin: 0;
+}
+
+.stick-area {
+    position: relative;
+    top: 7.1px;
+    right: 2.4px;
+}
+
+.stick-1 {
+    transform: rotate(45deg);
+}
+
+.stick-2 {
+    transform: rotate(-45deg);
+}
+
+.stick-1, .stick-2 {
+    background-color: #777777;
+    position: absolute;
+    width: 21px;
+    height: 2px;
+}
+
+#alert-header, #confirm-header {
+    display: inline-block;
+    width: calc(100% - 36.2px);
+    height: 36.2px;
+}
+
+.cross:hover .stick-1, .cross:hover .stick-2{
+    background-color: #999999;
+}
+
+.cross:active .stick-1, .cross:active .stick-2{
+    background-color: #888888;
+}
+
+#alert {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#confirm {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#alert-content, #confirm-content {
+    animation-name: fade;
+    animation-duration: 0s;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+#alert-text, #confirm-text {
+    overflow-wrap: break-word;
+}
+
+.font-size-0 {
+    font-size: 0;
+}
+
+/*
+*{
+    outline:1px red solid;
+}
+*/
