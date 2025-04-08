@@ -345,33 +345,7 @@ html {
 #alert-header:active, #confirm-header:active {
     cursor: grabbing;
 }
-/*
-.btn-theme-light {
-    background-color: #ffffff;
-    color: black;
-}
 
-.btn-theme-dark {
-    background-color: #000000;
-    color: white;
-}
-
-.btn-theme-light:hover {
-    background-color: #dddddd;
-}
-
-.btn-theme-light:active {
-    background-color: #bbbbbb;
-}
-
-.btn-theme-dark:hover {
-    background-color: #444444;
-}
-
-.btn-theme-dark:active {
-    background-color: #666666;
-}
-*/
 .btn-white {
     background-color: #efefef;
 }
