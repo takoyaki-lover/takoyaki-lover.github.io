@@ -139,12 +139,10 @@ let theme = document.getElementById('theme-select');
 switch (localStorage.theme) {
     case 'light': {
         themeLight();
-        theme.options[1].selected = true;
         break;
     }
     case 'dark': {
         themeDark();
-        theme.options[2].selected = true;
         break;
     }
     case undefined:
@@ -154,7 +152,6 @@ switch (localStorage.theme) {
         } else {
             themeDark();
         }
-        theme.options[0].selected = true;
         break;
     }
 }
@@ -181,7 +178,8 @@ theme.addEventListener('change', function() {
             break;
         }
     }
-})
+    theme.options[0].selected = true;
+});
 
 function copyText(elementId) {
     navigator.clipboard.writeText(document.getElementById(elementId).value);
