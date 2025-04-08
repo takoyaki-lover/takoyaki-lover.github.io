@@ -122,8 +122,6 @@ function themeLight() {
         document.getElementsByClassName('theme-1')[i].style.color = '#000000';
         document.getElementsByClassName('theme-2')[i].style.backgroundColor = '#f4f4f4';
         document.getElementsByClassName('theme-2')[i].style.color = '#000000';
-        document.getElementById('theme-light').style.outline = '3.5px #2379c5 solid';
-        document.getElementById('theme-dark').style.outline = '0.1px #000000 solid';
     }
 };
 
@@ -133,39 +131,57 @@ function themeDark() {
         document.getElementsByClassName('theme-1')[i].style.color = '#ffffff';
         document.getElementsByClassName('theme-2')[i].style.backgroundColor = '#2f2f2f';
         document.getElementsByClassName('theme-2')[i].style.color = '#ffffff';
-        document.getElementById('theme-light').style.outline = '0.1px #000000 solid';
-        document.getElementById('theme-dark').style.outline = '3.5px #2379c5 solid';
     }
 };
+
+let theme = document.getElementById('theme-select');
 
 switch (localStorage.theme) {
     case 'light': {
         themeLight();
+        theme.options[1].selected = true;
         break;
     }
     case 'dark': {
         themeDark();
+        theme.options[2].selected = true;
         break;
     }
-    case undefined: {
+    case undefined:
+    case 'system': {
         if (window.matchMedia('(prefers-color-scheme: light)').matches) {
             themeLight();
         } else {
             themeDark();
         }
+        theme.options[0].selected = true;
         break;
     }
 }
 
-document.getElementById('theme-light').addEventListener('click', function () {
-    themeLight();
-    localStorage.theme = 'light';
-});
-
-document.getElementById('theme-dark').addEventListener('click', function () {
-    themeDark();
-    localStorage.theme = 'dark';
-});
+theme.addEventListener('change', function() {
+    switch (theme.value) {
+        case 'system': {
+            if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                themeLight();
+            } else {
+                themeDark();
+            }
+            localStorage.theme = 'system';
+            break;
+        }
+        case 'light': {
+            themeLight();
+            localStorage.theme = 'light';
+            break;
+        }
+        case 'dark': {
+            themeDark();
+            localStorage.theme = 'dark';
+            break;
+        }
+    }
+})
 
 function copyText(elementId) {
     navigator.clipboard.writeText(document.getElementById(elementId).value);
@@ -306,9 +322,10 @@ function refresh(name) {
 if (navigator.getBattery) {
     navigator.getBattery().then(function (battery) {
         refresh(battery);
+        console.log(battery);
     });
 } else {
-    console.log('unavailable');
+    console.log('Unavailable because it\'s not supported.');
 }
 
 function getCurrentlevel() {
