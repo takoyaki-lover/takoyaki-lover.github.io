@@ -28,15 +28,11 @@
     }
 
     hr {
-        width: 690px;
+        width: calc(690px - 1.6px);
         margin: 5px 0 6px 0;
     }
 
     .normal-p {
-        margin: 5px 0 0 0;
-    }
-
-    .small-p {
         margin: 5px 0 0 0;
     }
 
@@ -156,16 +152,12 @@
     }
 
     hr {
-        width: 387px;
-        margin: 4px 0;
+        width: calc(387px - 1.6px);
+        margin: 5px 0 5px 0;
     }
 
     .normal-p {
         margin: 5px 0 0 0;
-    }
-
-    .small-p {
-        margin: 4px 0 0 0;
     }
 
     .me-p {
@@ -265,7 +257,7 @@ html {
     font-variant-numeric: tabular-nums;
 }
 
-.title-area, .title, .btn-theme-area, .btn-normal-area, .me-mode, .history-title, #alert-text, #confirm-text {
+.title-area, .title, .select-theme-area, .btn-normal-area, .me-mode, .history-title, #alert-text, #confirm-text {
     margin: 0;
 }
 
@@ -285,7 +277,7 @@ html {
     cursor: pointer
 }
 
-.btn-theme-area, .btn-clear-area, .alert-btn-area, .confirm-btn-area {
+.select-theme-area, .btn-clear-area, .alert-btn-area, .confirm-btn-area {
     text-align: right;
 }
 
@@ -295,10 +287,6 @@ html {
 
 .normal-p, .me-p {
     font-size: 1rem;
-}
-
-.small-p {
-    font-size: .9rem;
 }
 
 .btn-normal, .btn-modal {
