@@ -20,20 +20,20 @@
     }
 
     .first-p {
-        margin: 0;
+        margin: 5px 0 0 0;
     }
 
     .second-p {
-        margin: 0;
+        margin: 3px 0 0 0;
     }
 
     hr {
         width: calc(690px - 1.6px);
-        margin: 5px 0 6px 0;
+        margin: 7px 0 7px 0;
     }
 
     .normal-p {
-        margin: 5px 0 0 0;
+        margin: 8px 0 0 0;
     }
 
     .me-p {
@@ -177,7 +177,6 @@
     #delete {
         width: 45px;
         margin: 0 0 0 5px;
-        padding: 0.8px 6px;
     }
 
     .measurement-container {
@@ -249,8 +248,11 @@
 /*common*/
 
 html {
-    font-family: sans-serif;
     text-size-adjust: none;
+}
+
+html, .theme-select, .btn {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .number {
@@ -289,18 +291,13 @@ html {
     font-size: 1rem;
 }
 
-.btn-normal, .btn-modal {
-    border: 1px black solid;
-    border-radius: 2.5px;
-}
-
 .measurement-area {
     display: block;
     margin: 0;
 }
 
 .history-title, #history {
-    font-family: monospace;
+    font-family: 'BIZ UDGothic', 'Courier New', Courier, monospace;
 }
 
 #history {
@@ -332,6 +329,9 @@ html {
     font-family: sans-serif;
     text-align: center;
     vertical-align: middle;
+    border: 1px black solid;
+    border-radius: 2px;
+    padding: 2px 6px;
 }
 
 .btn:hover, .cross:hover {
@@ -348,6 +348,7 @@ html {
 
 .btn-white {
     background-color: #efefef;
+    color: #000000;
 }
 
 .btn-white:hover {
@@ -360,7 +361,7 @@ html {
 
 .btn-blue {
     background-color: #2a66ce;
-    color: white;
+    color: #ffffff;
 }
 
 .btn-blue:hover {
