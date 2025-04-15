@@ -115,7 +115,7 @@
 
 }
 
-@media screen and (min-width: 401px) and (max-width: 700px) { /*for Tablet*/
+@media screen and (min-width: 551px) and (max-width: 700px) { /*for Tablet*/
     html {
         font-size: 16px;
     }
@@ -363,7 +363,7 @@ html {
 }
 
 html, .theme-select, .btn {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial", "Helvetica", sans-serif;
 }
 
 .number {
@@ -408,7 +408,7 @@ html, .theme-select, .btn {
 }
 
 .history-title, #history {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", "Courier", monospace;
 }
 
 #history {
@@ -437,7 +437,6 @@ html, .theme-select, .btn {
 }
 
 .btn {
-    font-family: sans-serif;
     text-align: center;
     vertical-align: middle;
     border: 1px black solid;
