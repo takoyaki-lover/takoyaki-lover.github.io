@@ -120,6 +120,8 @@ function themeLight() {
     for (i = 0; i < document.getElementsByClassName('theme-1').length; i++) {
         document.getElementsByClassName('theme-1')[i].style.backgroundColor = '#ffffff';
         document.getElementsByClassName('theme-1')[i].style.color = '#000000';
+    }
+    for (i = 0; i < document.getElementsByClassName('theme-2').length; i++) {
         document.getElementsByClassName('theme-2')[i].style.backgroundColor = '#f4f4f4';
         document.getElementsByClassName('theme-2')[i].style.color = '#000000';
     }
@@ -129,6 +131,8 @@ function themeDark() {
     for (i = 0; i < document.getElementsByClassName('theme-1').length; i++) {
         document.getElementsByClassName('theme-1')[i].style.backgroundColor = '#1b1b1b';
         document.getElementsByClassName('theme-1')[i].style.color = '#ffffff';
+    }
+    for (i = 0; i < document.getElementsByClassName('theme-2').length; i++) {
         document.getElementsByClassName('theme-2')[i].style.backgroundColor = '#2f2f2f';
         document.getElementsByClassName('theme-2')[i].style.color = '#ffffff';
     }
@@ -542,13 +546,14 @@ function measurement() {
     if (localStorage.start !== undefined && localStorage.end !== undefined) {
         let start = JSON.parse(localStorage.start);
         let end = JSON.parse(localStorage.end);
+        let time;
+        let level;
         if (start[0] === true && end[0] === true) {
-            let time = Math.floor((end[1] - start[1]) / 1000);
+            time = Math.floor((end[1] - start[1]) / 1000);
             document.getElementById('not-start').style.display = 'none';
             document.getElementById('in-process').style.display = 'none';
             document.getElementById('complete').style.display = 'inline';
             document.getElementById('me-time').textContent = convert_to_hms(time);
-            let level;
             if (getCurrentlevel() == -1) {
                 document.getElementById('me-level').textContent = '--';
                 document.getElementById('me-result').textContent = '-.--';
@@ -558,6 +563,7 @@ function measurement() {
             } else {
                 document.getElementById('me-level').textContent = Math.abs(end[2] - start[2]);
                 if (time >= 60) {
+                    level = Math.abs(end[2] - start[2]);
                     document.getElementById('me-result').textContent = (Math.round(level / (time / 60) * 100) / 100).toFixed(2);
                     document.getElementById('me-unit').style.display = 'inline';
                     document.getElementById('me-fail').style.display = 'none';
@@ -569,7 +575,8 @@ function measurement() {
                 document.getElementById('is-present').style.display = 'none';
             }
         } else if (start[0] === true && end[0] === false) {
-            let time = Math.floor((getUnixtime_c() - start[1]) / 1000);
+            time = Math.floor((getUnixtime_c() - start[1]) / 1000);
+            level = Math.abs(getCurrentlevel() - start[2]);
             document.getElementById('not-start').style.display = 'none';
             document.getElementById('complete').style.display = 'none';
             document.getElementById('in-process').style.display = 'inline';
