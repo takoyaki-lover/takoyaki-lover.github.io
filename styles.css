@@ -15,7 +15,7 @@
     .theme-select {
         font-size: 18px;
         height: 30px;
-        width: 90px;
+        width: 100px;
         margin: 0 0 5px 0;
     }
 
@@ -381,6 +381,7 @@ html, .theme-select, .btn {
 }
 
 .theme-select {
+    color: #000000;
     vertical-align: middle;
     border: 1px #000000 solid;
     border-radius: 0.5px;
