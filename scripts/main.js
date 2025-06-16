@@ -5,6 +5,9 @@ localStorage.removeItem("dischargingTime")
 localStorage.removeItem("charge_level")
 localStorage.removeItem("charge_basetime")
 localStorage.removeItem("level_basetime")
+localStorage.removeItem("confirm_margin")
+localStorage.removeItem("alert_margin")
+localStorage.removeItem("id")
 
 function convert_to_normaltime(unixtime) {
     let date = new Date(unixtime * 1000);
@@ -58,10 +61,12 @@ document.getElementById('confirm-header').onpointermove = function (event) {
     }
 }
 
+let alert_margin;
 function alertOpen(alertText) {
     document.getElementById('alert').style.display = 'block';
     document.getElementById('alert-text').textContent = alertText;
-    localStorage.alert_margin = document.getElementById('alert-content').style.margin;
+
+    alert_margin = document.getElementById('alert-content').style.margin;
     let x = document.getElementById('alert-content').offsetLeft;
     let y = document.getElementById('alert-content').offsetTop;
     document.getElementById('alert-content').style.left = x + 'px';
@@ -72,18 +77,22 @@ function alertOpen(alertText) {
 
 function alertClose() {
     document.getElementById('alert').style.display = 'none';
+
     document.getElementById('alert-content').style.position = 'static';
-    document.getElementById('alert-content').style.margin = localStorage.alert_margin;
+    document.getElementById('alert-content').style.margin = alert_margin;
 };
 
 document.getElementById('alert-close-cross').addEventListener('click', alertClose);
 document.getElementById('alert-close-ok').addEventListener('click', alertClose);
 
+let id;
+let confirm_margin;
 function confirmOpen(confirmText, identification) {
     document.getElementById('confirm').style.display = 'block';
     document.getElementById('confirm-text').textContent = confirmText;
-    localStorage.id = identification;
-    localStorage.confirm_margin = document.getElementById('confirm-content').style.margin;
+    id = identification;
+
+    confirm_margin = document.getElementById('confirm-content').style.margin;
     let x = document.getElementById('confirm-content').offsetLeft;
     let y = document.getElementById('confirm-content').offsetTop;
     document.getElementById('confirm-content').style.left = x + 'px';
@@ -94,8 +103,9 @@ function confirmOpen(confirmText, identification) {
 
 function confirmClose() {
     document.getElementById('confirm').style.display = 'none';
+
     document.getElementById('confirm-content').style.position = 'static';
-    document.getElementById('confirm-content').style.margin = localStorage.confirm_margin;
+    document.getElementById('confirm-content').style.margin = confirm_margin;
 };
 
 document.getElementById('confirm-close-cross').addEventListener('click', confirmClose)
@@ -104,7 +114,7 @@ document.getElementById('confirm-close-no').addEventListener('click', confirmClo
 
 document.getElementById('confirm-close-yes').addEventListener('click', function () {
     confirmClose();
-    switch (localStorage.id) {
+    switch (id) {
         case 'delete': {
             localStorage.chargeChangeTime = JSON.stringify(null);
             localStorage.chargeLevel = JSON.stringify(null);
